@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90ade230-0972-454a-97fe-e30451d2dfc5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/MyArrayList.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/MyArrayListTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generics.iml" afterPath="$PROJECT_DIR$/Generics.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/squier/john/generics/GenericArray.java" afterPath="$PROJECT_DIR$/src/main/java/squier/john/generics/GenericArray.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/squier/john/generics/MyArrayList.java" afterPath="$PROJECT_DIR$/src/main/java/squier/john/generics/MyArrayList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/squier/john/generics/GenericArrayTest.java" afterPath="$PROJECT_DIR$/src/test/java/squier/john/generics/GenericArrayTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/squier/john/generics/MyArrayListTest.java" afterPath="$PROJECT_DIR$/src/test/java/squier/john/generics/MyArrayListTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -19,7 +17,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/generics$GenericArrayTest.coverage" NAME="GenericArrayTest Coverage Results" MODIFIED="1487790712154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/generics$squier_john_generics_in_Generics.coverage" NAME="squier.john.generics in Generics Coverage Results" MODIFIED="1487794161866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>squier.john.generics.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/generics$GenericArrayTest.coverage" NAME="GenericArrayTest Coverage Results" MODIFIED="1487791511606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>squier.john.generics.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/generics$MyArrayListTest.coverage" NAME="MyArrayListTest Coverage Results" MODIFIED="1487793930828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>squier.john.generics.*</FILTER>
     </SUITE>
   </component>
@@ -42,19 +46,28 @@
       <file leaf-file-name="MyArrayList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/squier/john/generics/MyArrayList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-              <folding />
+            <state relative-caret-position="476">
+              <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+              <folding>
+                <element signature="e#506#507#0" expanded="true" />
+                <element signature="e#541#542#0" expanded="true" />
+                <element signature="e#912#913#0" expanded="true" />
+                <element signature="e#940#941#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyArrayListTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MyArrayListTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/squier/john/generics/MyArrayListTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="133">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
+              <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2217#2218#0" expanded="true" />
+                <element signature="e#2252#2253#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,28 +75,29 @@
       <file leaf-file-name="GenericArray.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/squier/john/generics/GenericArray.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="779">
+              <caret line="41" column="5" lean-forward="false" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
               <folding>
-                <element signature="e#221#251#0" expanded="true" />
-                <element signature="e#301#302#0" expanded="true" />
-                <element signature="e#362#363#0" expanded="true" />
-                <element signature="e#404#405#0" expanded="true" />
-                <element signature="e#441#442#0" expanded="true" />
-                <element signature="e#472#473#0" expanded="true" />
-                <element signature="e#509#510#0" expanded="true" />
-                <element signature="e#534#535#0" expanded="true" />
-                <element signature="e#571#572#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#268#298#0" expanded="true" />
+                <element signature="e#333#334#0" expanded="true" />
+                <element signature="e#373#374#0" expanded="true" />
+                <element signature="e#505#506#0" expanded="true" />
+                <element signature="e#543#544#0" expanded="true" />
+                <element signature="e#568#569#0" expanded="true" />
+                <element signature="e#603#604#0" expanded="true" />
+                <element signature="e#634#635#0" expanded="true" />
+                <element signature="e#693#694#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GenericArrayTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GenericArrayTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/squier/john/generics/GenericArrayTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+            <state relative-caret-position="343">
+              <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,9 +131,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/squier/john/generics/MyArrayListTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/squier/john/generics/GenericArray.java" />
         <option value="$PROJECT_DIR$/src/test/java/squier/john/generics/GenericArrayTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/squier/john/generics/GenericArray.java" />
+        <option value="$PROJECT_DIR$/src/main/java/squier/john/generics/MyArrayList.java" />
+        <option value="$PROJECT_DIR$/src/test/java/squier/john/generics/MyArrayListTest.java" />
       </list>
     </option>
   </component>
@@ -259,8 +274,8 @@
       <recent name="squier.john.generics" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GenericArrayTest">
-    <configuration default="false" name="GenericArrayTest.putAnIntegerInTheArrayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.squier.john.generics in Generics">
+    <configuration default="false" name="MyArrayListTest.addAStringToASize10ArrayListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="squier.john.generics.*" />
@@ -271,8 +286,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="squier.john.generics" />
-      <option name="MAIN_CLASS_NAME" value="squier.john.generics.GenericArrayTest" />
-      <option name="METHOD_NAME" value="putAnIntegerInTheArrayTest" />
+      <option name="MAIN_CLASS_NAME" value="squier.john.generics.MyArrayListTest" />
+      <option name="METHOD_NAME" value="addAStringToASize10ArrayListTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -286,7 +301,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="GenericArrayTest.putAndGetAStringInTheArrayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="MyArrayListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="squier.john.generics.*" />
@@ -297,35 +312,87 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="squier.john.generics" />
-      <option name="MAIN_CLASS_NAME" value="squier.john.generics.GenericArrayTest" />
-      <option name="METHOD_NAME" value="putAndGetAStringInTheArrayTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="GenericArrayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="squier.john.generics.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Generics" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="squier.john.generics" />
-      <option name="MAIN_CLASS_NAME" value="squier.john.generics.GenericArrayTest" />
+      <option name="MAIN_CLASS_NAME" value="squier.john.generics.MyArrayListTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="squier.john.generics in Generics" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="squier.john.generics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Generics" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="squier.john.generics" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="MyArrayListTest.ensureThatACopiedArrayListContainsAllElements" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="squier.john.generics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Generics" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="squier.john.generics" />
+      <option name="MAIN_CLASS_NAME" value="squier.john.generics.MyArrayListTest" />
+      <option name="METHOD_NAME" value="ensureThatACopiedArrayListContainsAllElements" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="MyArrayListTest.getIndexOutOfBounds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="squier.john.generics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Generics" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="squier.john.generics" />
+      <option name="MAIN_CLASS_NAME" value="squier.john.generics.MyArrayListTest" />
+      <option name="METHOD_NAME" value="getIndexOutOfBounds" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -711,16 +778,20 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.GenericArrayTest.putAnIntegerInTheArrayTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.GenericArrayTest.putAndGetAStringInTheArrayTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.GenericArrayTest" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.MyArrayListTest.addAStringToASize10ArrayListTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.MyArrayListTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.squier.john.generics in Generics" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.MyArrayListTest.ensureThatACopiedArrayListContainsAllElements" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.MyArrayListTest.getIndexOutOfBounds" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.GenericArrayTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.GenericArrayTest.putAndGetAStringInTheArrayTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.GenericArrayTest.putAnIntegerInTheArrayTest" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.squier.john.generics in Generics" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.MyArrayListTest.getIndexOutOfBounds" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.MyArrayListTest.ensureThatACopiedArrayListContainsAllElements" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.MyArrayListTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.MyArrayListTest.addAStringToASize10ArrayListTest" />
       </list>
     </recent_temporary>
   </component>
@@ -734,23 +805,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1487789988602</updated>
-      <workItem from="1487790003417" duration="727000" />
+      <workItem from="1487790003417" duration="4163000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GenericArrayTest - 2017.02.22 at 14h 11m 53s.xml">
+    <history-entry file="GenericArrayTest - 2017.02.22 at 14h 48m 16s.xml">
       <configuration name="GenericArrayTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GenericArrayTest_putAnIntegerInTheArrayTest - 2017.02.22 at 14h 10m 17s.xml">
-      <configuration name="GenericArrayTest.putAnIntegerInTheArrayTest" configurationId="JUnit" />
+    <history-entry file="GenericArrayTest_getFirstEmptyIndexTest - 2017.02.22 at 14h 52m 31s.xml">
+      <configuration name="GenericArrayTest.getFirstEmptyIndexTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GenericArrayTest_putAndGetAStringInTheArrayTest - 2017.02.22 at 14h 11m 48s.xml">
-      <configuration name="GenericArrayTest.putAndGetAStringInTheArrayTest" configurationId="JUnit" />
+    <history-entry file="MyArrayListTest - 2017.02.22 at 15h 04m 17s.xml">
+      <configuration name="MyArrayListTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyArrayListTest - 2017.02.22 at 15h 05m 32s.xml">
+      <configuration name="MyArrayListTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyArrayListTest_addAStringToASize10ArrayListTest - 2017.02.22 at 15h 04m 11s.xml">
+      <configuration name="MyArrayListTest.addAStringToASize10ArrayListTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyArrayListTest_ensureThatACopiedArrayListContainsAllElements - 2017.02.22 at 15h 08m 16s.xml">
+      <configuration name="MyArrayListTest.ensureThatACopiedArrayListContainsAllElements" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyArrayListTest_getIndexOutOfBounds - 2017.02.22 at 15h 09m 18s.xml">
+      <configuration name="MyArrayListTest.getIndexOutOfBounds" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="squier_john_generics_in_Generics - 2017.02.22 at 15h 05m 42s.xml">
+      <configuration name="squier.john.generics in Generics" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="squier_john_generics_in_Generics - 2017.02.22 at 15h 08m 22s.xml">
+      <configuration name="squier.john.generics in Generics" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="squier_john_generics_in_Generics - 2017.02.22 at 15h 09m 23s.xml">
+      <configuration name="squier.john.generics in Generics" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="727000" />
+    <option name="totallyTimeSpent" value="4163000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-359" y="-1080" width="1920" height="1080" extended-state="6" />
@@ -769,7 +861,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299595" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -795,7 +887,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -811,46 +905,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/squier/john/generics/GenericArrayTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/squier/john/generics/GenericArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="41" column="5" lean-forward="false" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#268#298#0" expanded="true" />
+            <element signature="e#333#334#0" expanded="true" />
+            <element signature="e#373#374#0" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+            <element signature="e#568#569#0" expanded="true" />
+            <element signature="e#603#604#0" expanded="true" />
+            <element signature="e#634#635#0" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/squier/john/generics/MyArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-          <folding />
+        <state relative-caret-position="476">
+          <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+          <folding>
+            <element signature="e#506#507#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#912#913#0" expanded="true" />
+            <element signature="e#940#941#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/squier/john/generics/MyArrayListTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/squier/john/generics/GenericArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#221#251#0" expanded="true" />
-            <element signature="e#301#302#0" expanded="true" />
-            <element signature="e#362#363#0" expanded="true" />
-            <element signature="e#404#405#0" expanded="true" />
-            <element signature="e#441#442#0" expanded="true" />
-            <element signature="e#472#473#0" expanded="true" />
-            <element signature="e#509#510#0" expanded="true" />
-            <element signature="e#534#535#0" expanded="true" />
-            <element signature="e#571#572#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/squier/john/generics/GenericArrayTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
           <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2217#2218#0" expanded="true" />
+            <element signature="e#2252#2253#0" expanded="true" />
           </folding>
         </state>
       </provider>

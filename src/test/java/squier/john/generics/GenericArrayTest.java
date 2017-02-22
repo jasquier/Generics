@@ -14,8 +14,8 @@ public class GenericArrayTest {
 
     @Before
     public void setup() {
-        genericArrayI = new GenericArray<>(Integer.class, 10);
-        genericArrayS = new GenericArray<>(String.class, 5);
+        genericArrayI = new GenericArray<>(10);
+        genericArrayS = new GenericArray<>(1);
     }
 
     @Test
@@ -33,15 +33,42 @@ public class GenericArrayTest {
 
     @Test
     public void putAndGetAStringInTheArrayTest() {
-        int expectedSize = 5;
+        int expectedSize = 1;
         String expected = "test";
 
         int actualSize = genericArrayS.size();
-        genericArrayS.put(4, "test");
-        String actual = genericArrayS.get(4);
+        genericArrayS.put(0, "test");
+        String actual = genericArrayS.get(0);
 
         Assert.assertEquals(expectedSize, actualSize);
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void arrayIsNotFullTest() {
+        boolean expected = false;
+
+        boolean actual = genericArrayI.isFull();
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void arrayIsFullTest() {
+        boolean expected = true;
+
+        genericArrayS.put(0, "");
+        boolean actual = genericArrayS.isFull();
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getFirstEmptyIndexTest() {
+        int expected = 0;
+
+        int actual = genericArrayS.getFirstEmptyIndex();
+
+        Assert.assertEquals(expected, actual);
+    }
 }

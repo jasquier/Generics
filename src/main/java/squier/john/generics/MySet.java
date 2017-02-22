@@ -1,7 +1,8 @@
 package squier.john.generics;
 
 /**
- * Created by johnsquier on 2/22/17.
+ * @author John A. Squier
+ * Many of the methods in MySet rely on already tested methods in MyArrayList.
  */
 public class MySet<E> {
 
@@ -42,6 +43,6 @@ public class MySet<E> {
     }
 
     public Object[] toArray() {
-        return null;
+        return list.toArray();
     }
 }

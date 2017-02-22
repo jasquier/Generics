@@ -231,4 +231,33 @@ public class MyArrayListTest {
 
         Assert.assertFalse(arrayList1.isEmpty());
     }
+
+    @Test(expected = ElementNotFoundException.class)
+    public void indexOfTestElementNotInList() {
+        arrayList1.indexOf(10);
+    }
+
+    @Test
+    public void indexOfTest() {
+        arrayList1.add(0);
+        arrayList1.add(1);
+        arrayList1.add(2);
+        int expected = 1;
+
+        int actual = arrayList1.indexOf(1);
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void toArrayTest() {
+        arrayList1.add(0);
+        arrayList1.add(1);
+        arrayList1.add(2);
+        Object[] a = arrayList1.toArray();
+
+        Assert.assertTrue((int)a[0] == 0);
+        Assert.assertTrue((int)a[1] == 1);
+        Assert.assertTrue((int)a[2] == 2);
+    }
 }

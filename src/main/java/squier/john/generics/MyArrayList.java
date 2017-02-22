@@ -57,10 +57,8 @@ public class MyArrayList<E> {
             array = grow(array.length-1);
         }
         else if ( index < array.length-1 ) {
-            for ( int i = index; i < array.length-1; i++ ) {
-                array[i] =  array[i+1];
-                array = grow(array.length-1);
-            }
+            shiftArrayElementsDownOne(index);
+            array = grow(array.length-1);
         }
         else {
             throw new IndexOutOfBoundsException();
@@ -68,9 +66,15 @@ public class MyArrayList<E> {
         return false;
     }
 
+    private void shiftArrayElementsDownOne(int startOfShiftIndex) {
+        for ( int i = startOfShiftIndex; i < array.length-1; i++ ) {
+            array[i] =  array[i+1];
+        }
+    }
+
     public boolean remove(E element) {
         if ( contains(element) ) {
-            remove(getFirstIndexOf(element));
+            remove(indexOf(element));
         }
         else {
             throw new ElementNotFoundException();
@@ -108,23 +112,19 @@ public class MyArrayList<E> {
         return getLastEmptyIndex() == array.length;
     }
 
-    private int getFirstIndexOf(E element) {
-        int index = 0;
-        if ( contains(element) ) {
-            for ( int i  = 0; i < array.length; i++ ) {
-                if ( array[i] == element) {
-                    return index;
-                }
-                else {
-                    index++;
-                }
+    public int indexOf(E element) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == element) {
+                return i;
             }
-            return index;
         }
-        else {
-            throw new ElementNotFoundException();
-        }
+        throw new ElementNotFoundException();
     }
+
+    public Object[] toArray() {
+        return array;
+    }
+
 
     private int getFirstEmptyIndex() {
         int firstEmptyIndex = 0;
@@ -146,6 +146,7 @@ public class MyArrayList<E> {
         System.arraycopy(array, 0, dest, 0, array.length);
     }
 
+    // can also shrink the array
     private Object[] grow(int newSize) {
         Object[] dest = new Object[newSize];
         if ( newSize < array.length ) {

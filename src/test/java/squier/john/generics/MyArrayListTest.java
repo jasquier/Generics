@@ -78,4 +78,24 @@ public class MyArrayListTest {
     public void getIndexOutOfBounds() {
         arrayList1.get(100);
     }
+
+    @Test
+    public void addElementToIndex9WhenArrayListIsSizeOne() {
+        arrayList1.add(0);
+        int expectedSizeBefore = 1;
+        int expectedSizeAfter = 10;
+        Integer expectedIndexZero = 0;
+        Integer expectedIndexNine = 9;
+
+        int actualSizeBefore = arrayList1.size();
+        arrayList1.add(9, 9);
+        int actualSizeAfter = arrayList1.size();
+        Integer actualIndexZero = arrayList1.get(0);
+        Integer actualIndexNine = arrayList1.get(9);
+
+        Assert.assertEquals(expectedSizeBefore, actualSizeBefore);
+        Assert.assertEquals(expectedSizeAfter, actualSizeAfter);
+        Assert.assertEquals(expectedIndexZero, actualIndexZero);
+        Assert.assertEquals(expectedIndexNine, actualIndexNine);
+    }
 }

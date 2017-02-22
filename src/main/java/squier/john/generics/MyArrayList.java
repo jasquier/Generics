@@ -36,7 +36,16 @@ public class MyArrayList<E> {
     }
 
     public boolean add(int index, E element) {
-        return false;
+        boolean added = false;
+        if ( index < arrayListSize ) {
+
+        }
+        else {
+            array = copyArrayIntoAnArrayOfSizeIndexPlusOne(index);
+            added = array.put(index, element);
+            arrayListSize = array.size();
+        }
+        return added;
     }
 
     public E get(int index) {
@@ -63,6 +72,14 @@ public class MyArrayList<E> {
         boolean added = array.put(indexToAddTo, element);
 
         return added;
+    }
+
+    private GenericArray<E> copyArrayIntoAnArrayOfSizeIndexPlusOne(int index) {
+        GenericArray<E> copy = new GenericArray<E>(index+1);
+        for ( int i = 0; i < array.size(); i++ ) {
+            copy.put(i, array.get(i));
+        }
+        return copy;
     }
 
     private GenericArray<E> copyArrayAndIncreaseSizeByOne() {

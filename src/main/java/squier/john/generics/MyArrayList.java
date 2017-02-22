@@ -114,7 +114,8 @@ public class MyArrayList<E> {
 
     public int indexOf(E element) {
         for (int i = 0; i < array.length; i++) {
-            if (array[i] == element) {
+            E elementAtI = (E)array[i];
+            if (elementAtI.equals(element)) {
                 return i;
             }
         }

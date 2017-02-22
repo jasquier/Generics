@@ -17,4 +17,8 @@ public class TwoTuple<A,B> {
     public boolean equals(TwoTuple other) {
         return this.first.equals(other.first);
     }
+
+    public String toString() {
+        return "(" + first + ", " + second + ")";
+    }
 }

@@ -31,4 +31,12 @@ public class MyMap<K,V> {
         }
         return value;
     }
+
+    public V get(K key) {
+        int indexOfKey = keysAndValues.indexOf(new TwoTuple<>(key, null));
+        System.out.println(indexOfKey);
+
+        return null;
+        //return keysAndValues.get(keysAndValues.indexOf(new TwoTuple(key, null))).second;
+    }
 }

@@ -16,20 +16,19 @@ public class MyMapTest {
         map = new MyMap<>();
     }
 
-    @Test
-    public void putTest() {
-        map.put(1, "one");
-        map.put(2, "two");
-
-    }
-
-    @Test
+    @Test(expected = ElementNotFoundException.class)
     public void getKeyThatIsNotInMapTest() {
-
+        String value = map.get(2);
     }
 
     @Test
     public void getKeyThatIsInMapTest() {
+    }
+
+    @Test
+    public void putTest() {
+        map.put(1, "one");
+        map.put(2, "two");
 
     }
 }

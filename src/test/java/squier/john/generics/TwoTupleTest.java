@@ -14,7 +14,7 @@ public class TwoTupleTest {
     @Before
     public void setup() {
         tuple1 = new TwoTuple<>(1, "one");
-        tuple2 = new TwoTuple<>(1, "two");
+        tuple2 = new TwoTuple<>(1, null);
         tuple3 = new TwoTuple<>(3, "three");
     }
 
@@ -26,5 +26,14 @@ public class TwoTupleTest {
     @Test
     public void tuplesNotEqualTest() {
         Assert.assertFalse(tuple1.equals(tuple3));
+    }
+
+    @Test
+    public void toStringTest() {
+        String expected = "(1, one)";
+
+        String actual = tuple1.toString();
+
+        Assert.assertEquals(expected, actual);
     }
 }

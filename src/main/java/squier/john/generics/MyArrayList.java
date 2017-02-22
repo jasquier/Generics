@@ -1,7 +1,5 @@
 package squier.john.generics;
 
-import java.lang.reflect.TypeVariable;
-
 /**
  * @author John A. Squier
  * My implementaiton of a generic ArrayList using a GenericArray (from Thinking in Java).
@@ -55,8 +53,14 @@ public class MyArrayList<E> {
     }
 
     public boolean remove(int index) {
-        if ( index < array.length ) {
-
+        if ( index == array.length-1 ) {
+            array = grow(array.length-1);
+        }
+        else if ( index < array.length-1 ) {
+            for ( int i = index; i < array.length-1; i++ ) {
+                array[i] =  array[i+1];
+                array = grow(array.length-1);
+            }
         }
         else {
             throw new IndexOutOfBoundsException();
@@ -65,24 +69,62 @@ public class MyArrayList<E> {
     }
 
     public boolean remove(E element) {
-
+        if ( contains(element) ) {
+            remove(getFirstIndexOf(element));
+        }
+        else {
+            throw new ElementNotFoundException();
+        }
         return false;
     }
 
-    private boolean addToNewArrayThatIsLargerByOne(E element) {
-        Object[] dest = new Object[array.length + 1];
-        copyArray(dest);
-        array = dest;
-        array[array.length-1] = element;
+    public boolean set(int index, E element) {
+        if ( index < array.length ) {
+            array[index] = element;
+            return true;
+        }
+        else {
+            throw new IndexOutOfBoundsException();
+        }
+    }
+
+    public boolean contains(E element) {
+        for ( int i = 0; i < array.length; i++ ) {
+            if ( array[i] == element ) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean clear() {
+        for ( int i = 0; i < array.length; i++ ) {
+            array[i] = null;
+        }
         return true;
     }
 
-    private boolean addToFirstEmptyIndex(E element) {
-        int indexToAddTo = getFirstEmptyIndex();
-        array[indexToAddTo] = element;
-        return true;
+    public boolean isEmpty() {
+        return getLastEmptyIndex() == array.length;
     }
 
+    private int getFirstIndexOf(E element) {
+        int index = 0;
+        if ( contains(element) ) {
+            for ( int i  = 0; i < array.length; i++ ) {
+                if ( array[i] == element) {
+                    return index;
+                }
+                else {
+                    index++;
+                }
+            }
+            return index;
+        }
+        else {
+            throw new ElementNotFoundException();
+        }
+    }
 
     private int getFirstEmptyIndex() {
         int firstEmptyIndex = 0;
@@ -90,6 +132,14 @@ public class MyArrayList<E> {
             firstEmptyIndex++;
         }
         return firstEmptyIndex;
+    }
+
+    private int getLastEmptyIndex() {
+        int lastEmptyIndex = 0;
+        while ( lastEmptyIndex < array.length && array[lastEmptyIndex] == null ) {
+            lastEmptyIndex++;
+        }
+        return lastEmptyIndex;
     }
 
     private void copyArray(Object[] dest) {

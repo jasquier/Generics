@@ -1,92 +1,109 @@
 package squier.john.generics;
 
+import java.lang.reflect.TypeVariable;
+
 /**
  * @author John A. Squier
  * My implementaiton of a generic ArrayList using a GenericArray (from Thinking in Java).
  */
 public class MyArrayList<E> {
 
-    private GenericArray<E> array;
-    private int arrayListSize;
+    private Object[] array;
 
     public MyArrayList() {
-        array = new GenericArray<E>(0);
-        arrayListSize = 0;
+        array = new Object[0];
     }
 
     public MyArrayList(int startSize) {
-        array = new GenericArray<E>(startSize);
-        arrayListSize = startSize;
+        array = new Object[startSize];
     }
 
     public int size() {
-        return array.size();
+        return array.length;
     }
 
     public boolean add(E element) {
-        boolean added = false;
-        if ( array.isFull() ) {
-            added = this.addToNewArrayThatIsLargerByOne(element);
+        int firstEmptyIndex = getFirstEmptyIndex();
+        if ( firstEmptyIndex < array.length ) {
+            array[firstEmptyIndex] =  element;
         }
         else {
-            added = this.addToFirstEmptyIndex(element);
+            array = grow(array.length+1);
+            array[array.length-1] = element;
         }
-        arrayListSize = array.size();
-        return added;
+        return true;
     }
 
     public boolean add(int index, E element) {
-        boolean added = false;
-        if ( index < arrayListSize ) {
-
+        if ( index < array.length ) {
+            array[index] = element;
         }
         else {
-            array = copyArrayIntoAnArrayOfSizeIndexPlusOne(index);
-            added = array.put(index, element);
-            arrayListSize = array.size();
+            array = grow(array.length+(index));
+            array[index] = element;
         }
-        return added;
+        return true;
     }
 
     public E get(int index) {
-        if ( index < arrayListSize) {
-            return array.get(index);
+        if ( index < array.length) {
+            return (E)array[index];
         }
         else {
             throw new IndexOutOfBoundsException();
         }
     }
 
+    public boolean remove(int index) {
+        if ( index < array.length ) {
+
+        }
+        else {
+            throw new IndexOutOfBoundsException();
+        }
+        return false;
+    }
+
+    public boolean remove(E element) {
+
+        return false;
+    }
+
     private boolean addToNewArrayThatIsLargerByOne(E element) {
-        GenericArray<E> copy = copyArrayAndIncreaseSizeByOne();
-
-        boolean added = copy.put(array.size(), element);
-        array = copy;
-
-        return added;
+        Object[] dest = new Object[array.length + 1];
+        copyArray(dest);
+        array = dest;
+        array[array.length-1] = element;
+        return true;
     }
 
     private boolean addToFirstEmptyIndex(E element) {
-        int indexToAddTo = array.getFirstEmptyIndex();
-
-        boolean added = array.put(indexToAddTo, element);
-
-        return added;
+        int indexToAddTo = getFirstEmptyIndex();
+        array[indexToAddTo] = element;
+        return true;
     }
 
-    private GenericArray<E> copyArrayIntoAnArrayOfSizeIndexPlusOne(int index) {
-        GenericArray<E> copy = new GenericArray<E>(index+1);
-        for ( int i = 0; i < array.size(); i++ ) {
-            copy.put(i, array.get(i));
+
+    private int getFirstEmptyIndex() {
+        int firstEmptyIndex = 0;
+        while ( firstEmptyIndex < array.length && array[firstEmptyIndex] != null ) {
+            firstEmptyIndex++;
         }
-        return copy;
+        return firstEmptyIndex;
     }
 
-    private GenericArray<E> copyArrayAndIncreaseSizeByOne() {
-        GenericArray<E> temp = new GenericArray<E>(array.size()+1);
-        for ( int i = 0; i < array.size(); i++ ) {
-            temp.put(i, array.get(i));
+    private void copyArray(Object[] dest) {
+        System.arraycopy(array, 0, dest, 0, array.length);
+    }
+
+    private Object[] grow(int newSize) {
+        Object[] dest = new Object[newSize];
+        if ( newSize < array.length ) {
+            System.arraycopy(array, 0, dest, 0, dest.length);
         }
-        return temp;
+        else {
+            copyArray(dest);
+        }
+        return dest;
     }
 }

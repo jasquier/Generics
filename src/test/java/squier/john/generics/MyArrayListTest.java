@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+
 /**
  * @author John A. Squier
  */
@@ -34,7 +35,7 @@ public class MyArrayListTest {
         Integer expected = 10;
 
         int actualSizeBefore = arrayList1.size();
-        arrayList1.add(10); // auto-boxing
+        arrayList1.add(new Integer(10));
         int actualSizeAfter = arrayList1.size();
         Integer actual = arrayList1.get(0);
 
@@ -75,7 +76,7 @@ public class MyArrayListTest {
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
-    public void getIndexOutOfBounds() {
+    public void getElementThatHasAnIndexOutOfBounds() {
         arrayList1.get(100);
     }
 
@@ -97,5 +98,31 @@ public class MyArrayListTest {
         Assert.assertEquals(expectedSizeAfter, actualSizeAfter);
         Assert.assertEquals(expectedIndexZero, actualIndexZero);
         Assert.assertEquals(expectedIndexNine, actualIndexNine);
+    }
+
+    @Test
+    public void addElementToIndex1WhenArrayListIsSize10() {
+        int expectedSizeBefore = 10;
+        int expectedSizeAfter = 10;
+        String expectedIndexOne = "one";
+
+        int actualSizeBefore = arrayList2.size();
+        arrayList2.add(1, "one");
+        int actualSizeAfter = arrayList2.size();
+        String actualIndexOne = arrayList2.get(1);
+
+        Assert.assertEquals(expectedSizeBefore, actualSizeBefore);
+        Assert.assertEquals(expectedSizeAfter, actualSizeAfter);
+        Assert.assertEquals(expectedIndexOne, actualIndexOne);
+    }
+
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void removeElementFromIndexThatDoesNotExist() {
+        arrayList1.remove(10);
+    }
+
+    @Test(expected = ElementNotFoundException.class)
+    public void removeElementThatDoesNotExist() {
+        arrayList1.remove(100);
     }
 }
